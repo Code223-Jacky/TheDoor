@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.door-link{
+    text-decoration: none;
+    /*ChatGPT told me that <a> has a default decoration so its better to make sure text decoration is none*/
+}
+
+
+.light {
+  position: absolute;
+  width: 130px;
+  height: 220px;
+  background: rgba(255, 220, 160, 0.22);
+  filter: blur(18px);
+  clip-path: polygon(0 15%, 35% 0, 100% 15%, 100% 100%, 15% 100%, 0 75%);
+  z-index: 1;
+}
+
+.door-frame {
+    position: relative;
+    width: 180px;
+    height: 300px;
+    background: #100303;
+    border: 5px ridge #390b0b;
+    box-shadow: 0 0 35px #180303;
+    perspective: 700px;
+}
+
+.door {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(
+        to right,
+        #390706,
+        #791710 45%,
+        #320505
+    );
+    border: 4px ridge #59110e;
+    transform-origin: left center;
+    transform: rotateY(-35deg);
+    transition: transform 1.2s ease-in-out;
+    z-index: 2
+}
+
+.panel {
+    position: absolute;
+    left: 12%;
+    width: 76%;
+    border: 4px ridge #4e110d;
+    box-sizing: border-box;
+    background: rgba(20, 0, 0, 0.15);
+    box-shadow: inset 3px 3px 12px #190303;
+    /*to make the door seemed 3D via the shadow*/
+}
+
+.top {
+    top: 8%;
+    height: 37%;
+}
+
+.bottom {
+    bottom: 7%;
+    height: 35%;
+}
+
+.knob {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 14px;
+    top: 140px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 30% 25%,
+        #ffe0a3,
+        #b88a50 45%,
+        #49301d 85%
+    );
+    /*i let ChatGPT to help me make the knob seem mor vivid through adding this radial gradient code*/
+    border: 2px solid #51301d;
+    box-shadow:
+        2px 3px 5px rgba(0, 0, 0, 0.8),
+        inset -2px -2px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+.door-link:hover .door {
+    transform: rotateY(-45deg);
+}
