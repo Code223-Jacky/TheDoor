@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <!--This line is suggested by ChatGPT in order to let the page be device width-->
         <title>The Door</title>
         <link rel="stylesheet" href="style.css">
+        <script src="game.js" defer></script>
+        <script src="index.js" defer></script>
     </head>
-    <body>
+    <body class="start-page">
     <a href="hallway.html" class="door-link">
         <div class="door-frame">
-            <div class="light"></div>
             <div class="door">
                 <div class="panel top"></div>
                 <div class="panel bottom"></div>
@@ -18,5 +18,10 @@
             </div>
         </div>
     </a>
+        
+    <audio id="door-creak" preload="auto">
+        <source src="Assets/door-creak.mp3" type="audio/mpeg">
+    </audio>
+
     </body>
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room 207</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+</head>
+
+<body class="game-page">
+
+    <h1>ROOM 207</h1>
+    <p>The telephone has been ringing for hours.</p>
+
+    <div class="game-object telephone" id="telephone">
+        <img src="Assets/telephone.png" alt="An old telephone">
+    </div>
+    
+    <audio id="phone-ring" loop preload="auto">
+        <source src="Assets/telephone-ring.mp3" type="audio/mpeg">
+    </audio>
+
+    <button type="button" id="start-ring" class="game-link">
+        HEAR THE RINGING
+    </button>
+
+    <p id="phone-message" class="hidden">
+        "I was still inside.
+        I called your name, why didn't you come back."
+    </p>
+
+    <div class="game-nav">
+        <a href="hallway.html" class="game-link">
+            HANG UP — RETURN TO HALLWAY
+        </a>
+    </div>
+
+</body>
+
+</html>

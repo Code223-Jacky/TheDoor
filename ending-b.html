@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Denial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+</head>
+
+<body class="game-page">
+
+    <h1>DENIAL</h1>
+
+    <p>
+        You turn away from the door.
+    </p>
+
+    <p>
+        You tell yourself there was nothing
+        you could have done.
+    </p>
+
+    <p>
+        The hallway grows dark.
+        The smell of smoke disappears.
+    </p>
+
+    <p>
+        Then you hear it again.
+    </p>
+
+    <p>
+        One knock.
+        Two knocks.
+        Three.
+    </p>
+    
+    <audio id="door-knock" preload="auto">
+        <source src="Assets/door-knock.mp3" type="audio/mpeg">
+    </audio>
+
+    <p id="ending-reveal" class="hidden">
+        You are standing before the same red door.
+    </p>
+
+    <button type="button" id="hear-knocks" class="game-link">
+        LISTEN
+    </button>
+
+    <a href="index.html" class="game-link">
+        RETURN
+    </a>
+
+</body>
+</html>
